@@ -73,16 +73,17 @@ function displayRepos(repos) {
     const updateAt = formatDate(repo.updated_at);
 
     repoCard.innerHTML = `
-  <a href="${repo.html_url}" target="_blank">
-    <i class="fas fa-code-branch">${repo.name}</i>
+  <a class="repo-name" href="${repo.html_url}" target="_blank">
+    ${repo.name}
   </a>
   <p class="repo-description">${repo.description || "No description"}</p>
   <div class="repo-meta">
     ${
       repo.language
-        ? `<div class="repo-meta-item">
-             <i class="fas fa-circle"></i> ${repo.language}
-           </div>`
+        ? `
+      <div class="repo-meta-item">
+        <i class="fas fa-circle"></i> ${repo.language}
+      </div>`
         : ""
     }
     <div class="repo-meta-item">
