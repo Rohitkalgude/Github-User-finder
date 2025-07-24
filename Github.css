@@ -44,7 +44,7 @@ h1 {
   color: var(--primary-color);
 }
 
-head p {
+header p {
   color: var(--text-gray);
   font-size: 1rem;
 }
@@ -188,7 +188,7 @@ button:hover {
   display: none;
 }
 
-.additinal-info {
+.additional-info {
   margin-top: 25px;
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
@@ -221,11 +221,11 @@ button:hover {
   text-decoration: underline;
 }
 
-.reops-section {
+.repos-section {
   margin-top: 30px;
 }
 
-.reops-section h3 {
+.repos-section h3 {
   font-size: 1.2rem;
   margin-bottom: 15px;
   color: var(--text-light);
@@ -234,15 +234,73 @@ button:hover {
 }
 
 .repos-container {
-  display: flex;
+  display: grid;
   grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
   gap: 15px;
 }
 
-.reops-card {
+.repo-card {
   background-color: rgba(255, 255, 255, 0.03);
   border-radius: var(--border-radius);
   padding: 15px;
   border: 1px solid rgba(255, 255, 255, 0.05);
-  transition: transform 0.2s, ackground-color 0.2s;
+  transition: transform 0.2s, background-color 0.2s;
+}
+
+.repo-card:hover {
+  transform: translateY(-3px);
+  background-color: rgba(255, 255, 255, 0.05);
+}
+
+.repo-name {
+  font-weight: 600;
+  margin-bottom: 8px;
+  color: var(--primary-light);
+  text-decoration: none;
+  display: block;
+}
+
+.repo-name:hover {
+  text-decoration: underline;
+}
+
+.repo-description {
+  color: var(--text-gray);
+  font-size: 0.9rem;
+  margin-bottom: 12px;
+  overflow: hidden;
+  min-height: 35px;
+}
+
+.repo-meta {
+  display: flex;
+  gap: 15px;
+  font-size: 0.85rem;
+  color: var(--text-gray);
+}
+
+.repo-meta-item {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+}
+
+.repo-meta-item i {
+  color: var(--primary-color);
+}
+
+.loading-repos {
+  color: var(--text-gray);
+  text-align: center;
+  padding: 20px;
+  grid-column: 1/ -1;
+}
+
+.no-repos {
+  color: var(--text-gray);
+  text-align: center;
+  padding: 30px;
+  grid-column: 1 / -1;
+  border: 1px dashed rgba(255, 255, 255, 0.01);
+  border-radius: var(--border-radius);
 }
